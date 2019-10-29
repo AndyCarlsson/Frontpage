@@ -29,10 +29,8 @@ body{
     justify-content: space-around;
     position: absolute;
     bottom: 35%;
-    left: 25%;
-    background-color: lightgrey;
+    left: 25%;    
     border-radius: 10px;
-   
 }
 
 .reddit{
