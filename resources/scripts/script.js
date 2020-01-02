@@ -1,4 +1,15 @@
 
+/*
+function changeBG(){
+  var srcTime = new Date();
+  var hour = srcTime.getHours();
+
+  if (hour >= 15) {
+    document.getElementById('container').background =
+  }
+
+};
+*/
 
 function clock(){
   var fullDate = new Date();
@@ -11,6 +22,7 @@ function clock(){
   if (minutes < 10){
     minutes = "0" + minutes;
   }
+
   document.getElementById('hour').innerHTML = hours + " :";
   document.getElementById('minutes').innerHTML = minutes;
 };
