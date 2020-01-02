@@ -1,6 +1,6 @@
 
-function clock(){
 
+function clock(){
   var fullDate = new Date();
   var hours = fullDate.getHours();
   var minutes = fullDate.getMinutes();
@@ -13,6 +13,6 @@ function clock(){
   }
   document.getElementById('hour').innerHTML = hours + " :";
   document.getElementById('minutes').innerHTML = minutes;
-}
+};
 
 setInterval(clock, 1000);
