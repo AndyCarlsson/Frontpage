@@ -31,23 +31,24 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 50%;
-    padding: 2px;
     justify-content: space-around;
     position: absolute;
-    bottom: 32%;
-    left: 25%;
-    border-radius: 10px;
+    top: 35%;
+    left: 36%;
 }
 
 .reddit{
+  padding: 20px;
 }
 
 .youtube{
+  padding: 30px;
 }
 
 .twitter{
+  padding: 30px;
 }
 
 .github{
+  padding: 30px;
 }

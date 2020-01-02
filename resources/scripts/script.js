@@ -11,8 +11,8 @@ function clock(){
   if (minutes < 10){
     minutes = "0" + minutes;
   }
-  document.getElementById('hour').innerHTML = hours;
-  document.getElementById('minutes').innerHTML = ":" + minutes;
+  document.getElementById('hour').innerHTML = hours + " :";
+  document.getElementById('minutes').innerHTML = minutes;
 }
 
 setInterval(clock, 1000);
