@@ -15,17 +15,17 @@ body{
     position: relative;
     background-image: url("/resources/images/firewatch_morning.jpg");
     background-size: cover;
-
 }
 
 .clock {
     left: 25%;
+    top: 15%;
+    width: 50%;
+    position: absolute;
+
     text-align: center;
     font-size: 50px;
     font-family: sans-serif;
-    width: 50%;
-    position: absolute;
-    top: 10%;
 }
 
 .link_section{
@@ -35,21 +35,20 @@ body{
     justify-content: space-around;
     position: absolute;
     top: 35%;
-    left: 36%;
+    left: 41%;
 }
 
 .reddit{
-  padding: 20px;
+  margin-right: 30px;
 }
 
 .youtube{
-  padding: 30px;
+  margin-right: 30px;
 }
 
 .twitter{
-  padding: 30px;
+  margin-right: 20px;
 }
 
 .github{
-  padding: 30px;
 }
