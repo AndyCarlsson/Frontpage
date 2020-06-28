@@ -22,10 +22,25 @@ body{
     top: 15%;
     width: 50%;
     position: absolute;
-
     text-align: center;
-    font-size: 50px;
+    font-size: 65px;
     font-family: sans-serif;
+    color: white;
+}
+.date {
+  left: 25%;
+  top: 25%;
+  width: 50%;
+  position: absolute;
+  text-align: center;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: white;
+}
+
+.clock span{
+  margin: 0;
+  padding: 0;
 }
 
 .link_section{
