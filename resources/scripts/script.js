@@ -30,12 +30,15 @@ function clock(){
 setInterval(clock, 1000)
 
 function getWeather(){
-  fetch('api.openweathermap.org/data/2.5/weather?q=London&appid=09b64160c45d82d5322b8d503c8b309d')
+  fetch('https://api.openweathermap.org/data/2.5/weather?q=Gothenburg&units=metric&appid=09b64160c45d82d5322b8d503c8b309d')
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => {
+      var tempValue = data['main']['temp'];
+
+      document.getElementById('degrees').innerHTML = tempValue;
+      document.getElementById('weather-icon').src = 'http://openweathermap.org/img/wn/10d@2x.png';
+    }) 
 };
 getWeather();
-
-
 
 

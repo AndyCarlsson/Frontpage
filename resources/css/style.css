@@ -37,33 +37,19 @@ body{
   font-family: sans-serif;
   color: white;
 }
+.weather {
+  left: 25%;
+  top: 30%;
+  width: 50%;
+  position: absolute;
+  text-align: center;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: white;
+}
 
 .clock span{
   margin: 0;
   padding: 0;
 }
 
-.link_section{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    position: absolute;
-    top: 35%;
-    left: 41%;
-}
-
-.reddit{
-  margin-right: 30px;
-}
-
-.youtube{
-  margin-right: 30px;
-}
-
-.twitter{
-  margin-right: 20px;
-}
-
-.github{
-}
