@@ -29,6 +29,13 @@ function clock(){
 };
 setInterval(clock, 1000)
 
+function getWeather(){
+  fetch('api.openweathermap.org/data/2.5/weather?q=London&appid=09b64160c45d82d5322b8d503c8b309d')
+    .then(response => response.json())
+    .then(data => console.log(data))
+};
+getWeather();
+
 
 
 
