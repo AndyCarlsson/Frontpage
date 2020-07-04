@@ -1,7 +1,7 @@
 function showDate() {
   const d = new Date();
   var year = d.getFullYear();
-  var month = d.getMonth();
+  var month = d.getMonth() + 1;
   var day = d.getDate();
 
   if (month < 10) {
