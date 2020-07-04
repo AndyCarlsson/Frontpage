@@ -1,21 +1,19 @@
 function showDate() {
-  const monthNames = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Okt',
-    'Nov',
-    'Dec',
-  ];
   const d = new Date();
-  document.getElementById('month').innerHTML = monthNames[d.getMonth()] + ' ';
-  document.getElementById('day').innerHTML = d.getDate();
+  var year = d.getFullYear();
+  var month = d.getMonth();
+  var day = d.getDate();
+
+  if (month < 10) {
+    month = '0' + month;
+  }
+  if (day < 10) {
+    day = '0' + day;
+  }
+
+  document.getElementById('year').innerHTML = year + '/';
+  document.getElementById('month').innerHTML = month + '/';
+  document.getElementById('day').innerHTML = day;
 }
 showDate();
 
@@ -34,8 +32,8 @@ function clock() {
   if (seconds < 10) {
     seconds = '0' + seconds;
   }
-  document.getElementById('hour').innerHTML = hours;
-  document.getElementById('minutes').innerHTML = minutes;
+  document.getElementById('hour').innerHTML = hours + ':';
+  document.getElementById('minutes').innerHTML = minutes + ':';
   document.getElementById('seconds').innerHTML = seconds;
 }
 setInterval(clock, 1000);
@@ -47,10 +45,12 @@ function getWeather() {
     .then((response) => response.json())
     .then((data) => {
       var tempValue = data['main']['temp'];
+      var logoId = data['weather'][0]['icon'];
 
-      document.getElementById('degrees').innerHTML = tempValue;
+      document.getElementById('degrees').innerHTML =
+        Math.round(tempValue) + '°';
       document.getElementById('weather-icon').src =
-        'http://openweathermap.org/img/wn/10d@2x.png';
+        'http://openweathermap.org/img/wn/' + logoId + '@2x.png';
     });
 }
 getWeather();
