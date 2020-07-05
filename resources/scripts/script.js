@@ -1,19 +1,25 @@
 function showDate() {
   const d = new Date();
-  var year = d.getFullYear();
-  var month = d.getMonth() + 1;
-  var day = d.getDate();
 
-  if (month < 10) {
-    month = '0' + month;
-  }
-  if (day < 10) {
-    day = '0' + day;
-  }
+  const dayName = ['Sön', 'Mån', 'Tis', 'Ons', 'Tors', 'Fre', 'Lör'];
+  const monthName = [
+    'Januari',
+    'Februari',
+    'Mars',
+    'April',
+    'Maj',
+    'Juni',
+    'Juli',
+    'Augusti',
+    'September',
+    'Oktober',
+    'November',
+    'December',
+  ];
 
-  document.getElementById('year').innerHTML = year + '/';
-  document.getElementById('month').innerHTML = month + '/';
-  document.getElementById('day').innerHTML = day;
+  document.getElementById('day').innerHTML = dayName[d.getDay()] + '\xa0';
+  document.getElementById('day-date').innerHTML = d.getDate() + '\xa0';
+  document.getElementById('month-name').innerHTML = monthName[d.getMonth()];
 }
 showDate();
 
@@ -33,8 +39,8 @@ function clock() {
     seconds = '0' + seconds;
   }
   document.getElementById('hour').innerHTML = hours + ':';
-  document.getElementById('minutes').innerHTML = minutes + ':';
-  document.getElementById('seconds').innerHTML = seconds;
+  document.getElementById('minutes').innerHTML = minutes;
+  // document.getElementById('seconds').innerHTML = seconds;
 }
 setInterval(clock, 1000);
 
@@ -48,7 +54,7 @@ function getWeather() {
       var logoId = data['weather'][0]['icon'];
 
       document.getElementById('degrees').innerHTML =
-        Math.round(tempValue) + '°';
+        Math.round(tempValue) + '°C';
       document.getElementById('weather-icon').src =
         'http://openweathermap.org/img/wn/' + logoId + '@2x.png';
     });
