@@ -17,7 +17,7 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: 15% auto 15%;
-  grid-template-rows: 25% 10% 50% 15%;
+  grid-template-rows: 25% 15% 50% 10%;
 }
 
 .info-container {
@@ -71,22 +71,18 @@ body {
   padding: 0px;
 }
 
-#clock span {
-  margin: 0px;
-  padding: 0px;
-}
-
 .fav-container {
   height: 100%;
   width: 100%;
   grid-row: 3;
   grid-column: 2;
-  margin-top: 50px;
+  margin-top: 70px;
   display: grid;
   justify-content: center;
-  align-items: center;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 50% 50%;
+  align-items: flex-start;
+  grid-template-columns: 25% 25% 25%;
+  grid-template-rows: auto;
+  grid-auto-rows: 1fr;
 }
 
 .fav-container div h1 {
@@ -97,6 +93,8 @@ body {
 }
 
 .link-container {
+  height: 100%;
+  width: 90%;
   border: white 1px solid;
   border-radius: 10px;
   display: grid;
