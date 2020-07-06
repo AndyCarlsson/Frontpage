@@ -7,7 +7,8 @@
 body {
   height: 100vh;
   width: 100vw;
-  background-image: url('/resources/images/firewatch_morning.jpg');
+  /* background-image: url('/resources/images/firewatch_morning.jpg'); */
+  background-color: #313639;
   background-size: cover;
 }
 
@@ -16,7 +17,7 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: 15% auto 15%;
-  grid-template-rows: 25% auto 15%;
+  grid-template-rows: 25% 10% 50% 15%;
 }
 
 .info-container {
@@ -78,49 +79,59 @@ body {
 .fav-container {
   height: 100%;
   width: 100%;
-  grid-row: 2;
+  grid-row: 3;
   grid-column: 2;
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 15% auto 15%;
-}
-
-.fav-container div {
-  background-color: white;
-  opacity: 60%;
-  border-radius: 15px;
-  padding: 50px;
   margin-top: 50px;
-  font-size: 1.5em;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 50% 50%;
 }
 
-.fav-container h1 {
+.fav-container div h1 {
+  font-size: 1.3em;
+  color: #aaf0d1;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.link-container {
+  border: white 1px solid;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 70% 30%;
   font-size: 1em;
+  color: white;
+  padding: 10px;
+  margin: 5px;
 }
 
-.fav-container ul {
-  list-style: none;
+.link-container .iconify {
+  grid-row: 1 / span 2;
+  align-items: flex-end;
 }
 
-.programming {
-  grid-row: 2;
-  grid-column: 1;
+.link-container h2 {
+  grid-row: 1;
+  grid-column: 2;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-.design {
+.link-container p {
   grid-row: 2;
   grid-column: 2;
-}
-
-.entertainment {
-  grid-row: 2;
-  grid-column: 3;
+  font-size: 1em;
+  opacity: 75%;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .quote-container {
   background-color: gray;
-  grid-row: 3;
+  grid-row: 4;
   grid-column: 2;
   margin: 25px 0px 20px 0px;
   opacity: 50%;
