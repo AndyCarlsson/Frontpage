@@ -1,0 +1,2 @@
+This is a browser startpage intended for personal use with links to some of my most visited websites.
+I saw this project as a great way to explore the css grid property as well as general html / css / JavaScript.

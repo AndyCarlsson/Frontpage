@@ -7,7 +7,6 @@
 body {
   height: 100vh;
   width: 100vw;
-  /* background-image: url('/resources/images/firewatch_morning.jpg'); */
   background-color: #313639;
   background-size: cover;
 }
@@ -122,7 +121,7 @@ body {
 .link-container {
   height: 100%;
   width: 90%;
-  border-left: transparent 2px solid;
+  border-bottom: transparent 2px solid;
   display: grid;
   grid-template-columns: 30% 70%;
   grid-template-rows: 70% 30%;
@@ -135,7 +134,7 @@ body {
 
 .link-container:hover {
   /* background-color: #aaf0d1; */
-  border-left: #aaf0d1 2px solid;
+  border-bottom: #aaf0d1 2px solid;
 }
 
 .link-container .iconify {
@@ -168,4 +167,66 @@ a:link {
 
 a:active {
   text-decoration: none;
+}
+
+@media screen and (max-width: 1600px) {
+  .grid-container {
+    grid-template-rows: 25% 30% 40%;
+  }
+  .info-container {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .fav-container {
+    column-gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .grid-container {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+  }
+
+  .fav-container {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .search-box {
+    visibility: hidden;
+  }
+
+  .info-container {
+    grid-row: 1;
+    grid-column: 1;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .grid-container {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+  }
+
+  .fav-container {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .search-box {
+    visibility: hidden;
+  }
+
+  .info-container {
+    grid-row: 1;
+    grid-column: 1;
+    display: grid;
+  }
 }
