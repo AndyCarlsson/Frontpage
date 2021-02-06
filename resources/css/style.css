@@ -60,6 +60,11 @@ body {
   justify-content: center;
 }
 
+.date-weather-container{
+  display: flex;
+  padding: 25px;
+}
+
 #clock {
   grid-column: 1 / span 2;
   display: flex;
@@ -93,8 +98,8 @@ body {
   font-weight: 400;
 }
 
-#weather img {
-  scale: 0.8;
+#weather-icon {
+  scale: 0.1;
   margin: 0px;
   padding: 0px;
 }
