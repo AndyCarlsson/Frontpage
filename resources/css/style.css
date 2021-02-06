@@ -30,6 +30,7 @@ body {
 .search-box input[type='text'] {
   width: 50%;
   height: 40px;
+  padding: 20px;
   background-color: transparent;
   border: none;
   border-bottom: 1px white solid;
